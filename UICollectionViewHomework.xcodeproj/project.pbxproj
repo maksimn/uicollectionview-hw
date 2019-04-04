@@ -11,6 +11,7 @@
 		0C2D519022559B110016CBF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D518F22559B110016CBF1 /* ViewController.swift */; };
 		0C2D519522559B130016CBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D519422559B130016CBF1 /* Assets.xcassets */; };
 		0C2D519822559B130016CBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D519622559B130016CBF1 /* LaunchScreen.storyboard */; };
+		0C2D51A0225659480016CBF1 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D519F225659480016CBF1 /* AnimalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		0C2D519422559B130016CBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C2D519722559B130016CBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C2D519922559B130016CBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C2D519F225659480016CBF1 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				0C2D519422559B130016CBF1 /* Assets.xcassets */,
 				0C2D519622559B130016CBF1 /* LaunchScreen.storyboard */,
 				0C2D519922559B130016CBF1 /* Info.plist */,
+				0C2D519F225659480016CBF1 /* AnimalCollectionViewCell.swift */,
 			);
 			path = UICollectionViewHomework;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				0C2D519022559B110016CBF1 /* ViewController.swift in Sources */,
 				0C2D518E22559B110016CBF1 /* AppDelegate.swift in Sources */,
+				0C2D51A0225659480016CBF1 /* AnimalCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

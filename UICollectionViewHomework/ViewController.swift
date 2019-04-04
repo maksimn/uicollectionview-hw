@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource {
     
-    fileprivate let animalsDataSource: [String] = ["Собака", "Кошка", "Мышка"]
+    fileprivate let animalsDataSource: [String] = ["Собака", "Кошка", "Мышка", "Слон", "Олень", "Тигр", "Пума", "Рысь"];
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
@@ -18,7 +18,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         collectionViewLayout.minimumInteritemSpacing = 10
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
+        collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")
+        collectionView.backgroundColor = UIColor.yellow
         
         return collectionView
     }()
@@ -33,7 +34,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         animalsCollectionView.frame = view.frame
-        animalsCollectionView.backgroundColor = UIColor.cyan
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,14 +41,15 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let animalName = animalsDataSource[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: indexPath)
-        let label = UILabel()
-        label.text = animalName
         
-        cell.backgroundColor = UIColor.purple
-        cell.contentView.addSubview(label)
-
-        return cell
+        let animalName = animalsDataSource[indexPath.row]
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell {
+            
+            cell.animalNameLabel.text = animalName
+            return cell
+        }
+        
+        return UICollectionViewCell()
     }
 }
