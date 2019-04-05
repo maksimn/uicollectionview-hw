@@ -13,10 +13,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     fileprivate let animalsDataSource: [[String: String]] = AnimalsModel().getAnimalsData()
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        let cellWidth = view.frame.size.width / 2 - 16;
-        collectionViewLayout.itemSize = CGSize(width: cellWidth, height: 200)
-        collectionViewLayout.sectionInset = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+        let collectionViewLayout = AnimalCollectionViewLayout()
+        collectionViewLayout.bigItemHeight = 320
+        collectionViewLayout.smallItemHeight = 200
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
         collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")

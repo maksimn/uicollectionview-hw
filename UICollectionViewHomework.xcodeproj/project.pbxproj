@@ -13,6 +13,7 @@
 		0C2D519822559B130016CBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D519622559B130016CBF1 /* LaunchScreen.storyboard */; };
 		0C2D51A0225659480016CBF1 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D519F225659480016CBF1 /* AnimalCollectionViewCell.swift */; };
 		0C2D51C42256F7340016CBF1 /* AnimalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D51C32256F7340016CBF1 /* AnimalsModel.swift */; };
+		0C2D51C62257D7770016CBF1 /* AnimalCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D51C52257D7770016CBF1 /* AnimalCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0C2D519922559B130016CBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C2D519F225659480016CBF1 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C2D51C32256F7340016CBF1 /* AnimalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsModel.swift; sourceTree = "<group>"; };
+		0C2D51C52257D7770016CBF1 /* AnimalCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0C2D519922559B130016CBF1 /* Info.plist */,
 				0C2D519F225659480016CBF1 /* AnimalCollectionViewCell.swift */,
 				0C2D51C32256F7340016CBF1 /* AnimalsModel.swift */,
+				0C2D51C52257D7770016CBF1 /* AnimalCollectionViewLayout.swift */,
 			);
 			path = UICollectionViewHomework;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				0C2D519022559B110016CBF1 /* ViewController.swift in Sources */,
 				0C2D518E22559B110016CBF1 /* AppDelegate.swift in Sources */,
 				0C2D51A0225659480016CBF1 /* AnimalCollectionViewCell.swift in Sources */,
+				0C2D51C62257D7770016CBF1 /* AnimalCollectionViewLayout.swift in Sources */,
 				0C2D51C42256F7340016CBF1 /* AnimalsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

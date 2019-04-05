@@ -19,8 +19,9 @@ class AnimalsModel {
         let animal6: [String: String] = ["name": "Тигр", "description": "Excepteur sint occaecat cupidatat non proident", "grayValue": "0.6"]
         let animal7: [String: String] = ["name": "Пума", "description": "sunt in culpa qui officia deserunt mollit anim id est laborum", "grayValue": "0.7"]
         let animal8: [String: String] = ["name": "Рысь", "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.", "grayValue": "0.8"]
+        let animal9: [String: String] = ["name": "Леопард", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "grayValue": "0.55"]
         
-        let animalData = [animal1, animal2, animal3, animal4, animal5, animal6, animal7, animal8]
+        let animalData = [animal1, animal2, animal3, animal4, animal5, animal6, animal7, animal8, animal9]
         
         return animalData
     }
