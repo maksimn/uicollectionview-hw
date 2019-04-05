@@ -12,6 +12,7 @@ class AnimalCollectionViewCell: UICollectionViewCell {
     
     let animalNameLabel = UILabel()
     let animalDescriptionLabel = UILabel()
+    let animalImage = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +28,9 @@ class AnimalCollectionViewCell: UICollectionViewCell {
         animalDescriptionLabel.textColor = UIColor.white
         animalDescriptionLabel.numberOfLines = 0
         addSubview(animalDescriptionLabel)
+        
+        animalImage.backgroundColor = UIColor.yellow
+        addSubview(animalImage)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,5 +47,6 @@ class AnimalCollectionViewCell: UICollectionViewCell {
         let labelWidth = fullWidth - 2.0 * padding
         animalNameLabel.frame = CGRect(x: padding, y: fullHeight - 67, width: labelWidth, height: 18)
         animalDescriptionLabel.frame = CGRect(x: padding, y: fullHeight - 50, width: labelWidth, height: 50)
+        animalImage.frame = CGRect(x: 10, y: 10, width: labelWidth - 8, height: fullHeight - 84)
     }
 }
