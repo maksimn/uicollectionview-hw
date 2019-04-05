@@ -48,18 +48,21 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             
             cell.animalNameLabel.text = animalData["name"]
             cell.animalDescriptionLabel.text = animalData["description"]
-            
-            let colorStringValue: String = animalData["grayValue"] ?? "0.0"
-            
-            if let n = NumberFormatter().number(from: colorStringValue) {
-                let colorValue = CGFloat(truncating: n)
-                
-                cell.animalImage.backgroundColor = UIColor(red: colorValue, green: colorValue, blue: colorValue, alpha: 1.0)
-            }
+            cell.animalImage.backgroundColor = ViewController.parseString(animalData["grayValue"] ?? "0.0")
             
             return cell
         }
         
         return UICollectionViewCell()
+    }
+    
+    private static func parseString(_ str: String) -> UIColor {
+        if let number = NumberFormatter().number(from: str) {
+            let colorValue = CGFloat(truncating: number)
+            
+            return UIColor(red: colorValue, green: colorValue, blue: colorValue, alpha: 1.0)
+        }
+        
+        return UIColor.black
     }
 }
