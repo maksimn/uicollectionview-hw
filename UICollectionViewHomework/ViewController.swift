@@ -32,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        animalsCollectionView.frame = view.frame
+        animalsCollectionView.frame = CGRect(x: 0, y: 40, width: view.frame.width, height: view.frame.height - 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

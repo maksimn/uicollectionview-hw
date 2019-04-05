@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
+        window?.backgroundColor = UIColor.lightGray
         
         return true
     }
