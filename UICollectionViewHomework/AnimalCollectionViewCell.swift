@@ -27,7 +27,6 @@ class AnimalCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        // animalNameLabel.frame = CGRect(x: 6, y: 6, width: 60, height: 20)
         animalNameLabel.frame = self.contentView.frame
     }
 }

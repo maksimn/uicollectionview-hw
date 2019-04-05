@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource {
     
-    fileprivate let animalsDataSource: [String] = ["Собака", "Кошка", "Мышка", "Слон", "Олень", "Тигр", "Пума", "Рысь"];
+    fileprivate let animalsDataSource: [[String: String]] = AnimalsModel().getAnimalsData()
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.itemSize = CGSize(width: 150, height: 100)
-        collectionViewLayout.minimumInteritemSpacing = 10
+        let cellWidth = view.frame.size.width / 2 - 6;
+        collectionViewLayout.itemSize = CGSize(width: cellWidth, height: 200)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
         collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")
@@ -42,7 +42,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let animalName = animalsDataSource[indexPath.row]
+        let animalData = animalsDataSource[indexPath.row]
+        let animalName = animalData["name"]
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell {
             
