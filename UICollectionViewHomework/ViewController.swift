@@ -14,12 +14,13 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
-        let cellWidth = view.frame.size.width / 2 - 6;
+        let cellWidth = view.frame.size.width / 2 - 16;
         collectionViewLayout.itemSize = CGSize(width: cellWidth, height: 200)
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
         collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")
-        collectionView.backgroundColor = UIColor.yellow
+        collectionView.backgroundColor = UIColor.darkGray
         
         return collectionView
     }()
@@ -27,7 +28,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.yellow
         view.addSubview(animalsCollectionView)
     }
     
@@ -43,11 +43,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let animalData = animalsDataSource[indexPath.row]
-        let animalName = animalData["name"]
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell {
             
-            cell.animalNameLabel.text = animalName
+            cell.animalNameLabel.text = animalData["name"]
+            cell.animalDescriptionLabel.text = animalData["description"]
             return cell
         }
         
